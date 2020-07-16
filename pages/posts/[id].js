@@ -7,10 +7,10 @@ import { getAllPostIds, getPostData } from '../../lib/posts'
 
 export default function Post({ postData }) {
   return (
-		<Layout>
-			<Head>
-				<title>{postData.title}</title>
-			</Head>
+    <Layout>
+      <Head>
+        <title>{postData.title}</title>
+      </Head>
       <article>
         <h1 className={utilStyles.headingXl}>{postData.title}</h1>
         <div className={utilStyles.lightText}>
@@ -18,8 +18,8 @@ export default function Post({ postData }) {
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
-	 </Layout>
-	)
+   </Layout>
+  )
 }
 
 export async function getStaticPaths() {
